@@ -2,7 +2,7 @@ local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shl
 local Window = OrionLib:MakeWindow({Name = "AlmostHub", HidePremium = false, SaveConfig = true, ConfigFolder = "AlmostConfig", IntroText="Hi" IntroIcon = "https://almostthere.niuxii.repl.co/host/images/icon.png", Icon = "https://almostthere.niuxii.repl.co/host/images/icon.png"})
 
 
-OrionLib:MakeNotification({
+Window:MakeNotification({
 	Name = "Loaded!",
 	Content = "Welcome to AlmostHub, "..Player.."!",
 	Image = "https://almostthere.niuxii.repl.co/host/images/icon.png",
@@ -15,7 +15,7 @@ local Main = Window:MakeTab({
 	PremiumOnly = false
 })
 
-local Basics = Tab:AddSection({
+local Basics = Main:AddSection({
 	Name = "Basics"
 })
 
