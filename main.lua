@@ -1,6 +1,7 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "AlmostHub", HidePremium = false, SaveConfig = true, ConfigFolder = "AlmostConfig", IntroText="Hi" IntroIcon = "https://almostthere.niuxii.repl.co/host/images/icon.png", Icon = "https://almostthere.niuxii.repl.co/host/images/icon.png"})
 
+
 OrionLib:MakeNotification({
 	Name = "Loaded!",
 	Content = "Welcome to AlmostHub, "..Player.."!",
@@ -14,9 +15,13 @@ local Main = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local Basics = Tab:AddSection({
+	Name = "Basics"
+})
+
 local noclip = false
 
-Main:AddButton({
+Basics:AddButton({
 	Name = "Noclip",
 	Callback = function()
       		if noclip == false then
@@ -25,14 +30,14 @@ Main:AddButton({
   	end    
 })
 
-Main:AddButton({
+Basics:AddButton({
 	Name = "Fly",
 	Callback = function()
             loadstring(game:HttpGet('https://almostthere.niuxii.repl.co/host/scripts/fly.lua'))()
   	end    
 })
 
-Main:AddButton({
+Basics:AddButton({
 	Name = "God",
 	Callback = function()
             loadstring(game:HttpGet('https://almostthere.niuxii.repl.co/host/scripts/god.lua'))()
